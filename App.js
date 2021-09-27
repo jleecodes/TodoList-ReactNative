@@ -1,6 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+	KeyboardAvoidingView,
+	Platform,
+	StyleSheet,
+	Text,
+	View,
+	TextInput,
+} from 'react-native';
 import Task from './components/Task';
 
 export default function App() {
@@ -15,6 +22,13 @@ export default function App() {
 					<Task text={'Task 2'}></Task>
 				</View>
 			</View>
+
+			{/* Write a task */}
+			<KeyboardAvoidingView
+				behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+				style={styles.writeTaskWrapper}>
+				<TextInput style={styles.input} placeholder={'Write a task'} />
+			</KeyboardAvoidingView>
 		</View>
 	);
 }
