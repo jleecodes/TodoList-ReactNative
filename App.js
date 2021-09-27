@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
 		bottom: 60,
 		width: '100%',
 		flexDirection: 'row',
-		justifyContent: 'space-between',
+		justifyContent: 'space-around',
 		alignItems: 'center',
 	},
 	input: {
@@ -71,5 +71,15 @@ const styles = StyleSheet.create({
 		borderColor: '#C0C0C0',
 		borderWidth: 1,
 		width: 250,
+	},
+	addWrapper: {
+		width: 60,
+		height: 60,
+		backgroundColor: '#FFF',
+		borderRadius: 60,
+		justifyContent: 'center',
+		alignItems: 'center',
+		borderColor: '#C0C0C0',
+		borderWidth: 1,
 	},
 });
