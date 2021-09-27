@@ -13,9 +13,17 @@ import Task from './components/Task';
 
 export default function App() {
 	const [task, setTask] = useState();
+	const [taskItems, setTaskItems] = useState([]);
 
 	const handleAddTask = () => {
-		console.log(task);
+		setTaskItems([...taskItems, task]);
+		setTask(null);
+	};
+
+	const completeTask = (index) => {
+		let itemsCopy = [...taskItems];
+		itemsCopy.splice(index, 1);
+		setTaskItems(itemsCopy);
 	};
 
 	return (
@@ -25,8 +33,13 @@ export default function App() {
 				<Text style={styles.sectionTitle}>Today's tasks</Text>
 				<View style={styles.items}>
 					{/* This is where the tasks will go! */}
-					<Task text={'Task 1'}></Task>
-					<Task text={'Task 2'}></Task>
+					{taskItems.map((item, index) => {
+						return (
+							<TouchableOpacity key={index} onPress={() => completeTask(index)}>
+								<Task text={item}></Task>
+							</TouchableOpacity>
+						);
+					})}
 				</View>
 			</View>
 
