@@ -16,3 +16,10 @@ How to View
 Download the Expo application on your phone to see your application live as you are coding.
 After doing all of this, if you type in your command line 'expo start', a localhost webpage will show up and you can scan the QR code using the Expo application from your phone.
 (If you are on Mac, you can press 'i' after running 'expo start' to run an iOS simulator)
+
+
+For Part 1 of the tutorial,
+https://www.youtube.com/watch?v=0kL6nhutjQ8&ab_channel=MadeWithMatt
+
+For Part 2 of the tutorial,
+https://www.youtube.com/watch?v=00HFzh3w1B8&ab_channel=MadeWithMatt
